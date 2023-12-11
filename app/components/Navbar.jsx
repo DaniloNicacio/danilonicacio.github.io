@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import Link from "next/link";
 import NavLink from "@/app/components/NavLink";
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/solid";
+import MenuOverlay from "@/app/components/MenuOverlay";
 
 {/* Navbar Setup */}
 const navLinks = [
@@ -53,6 +54,7 @@ const Navbar = () => {
                     </ul>
                 </div>
             </div>
+            {navbarOpen ? <MenuOverlay links = {navLinks}/> : null}
         </nav>
     );
 };
