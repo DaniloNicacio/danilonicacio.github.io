@@ -6,6 +6,15 @@ import ProjectTag from "@/app/components/ProjectTag";
 const projectsData = [
     {
         id: 1,
+        title: "Sand Simulation",
+        description: "A Project that simulates sand using Cellular Automata principles",
+        image: "/images/projects/sand-simulation.png",
+        tag: ["All", "Web", "JavaScript"],
+        gitUrl: "https://github.com/DaniloNicacio/Sand-Simulation",
+        previewUrl: "https://danilonicacio.github.io/Sand-Simulation/"
+    },
+    {
+        id: 2,
         title: "Work in Progress",
         description: "This is just a placeholder",
         image: "/images/projects/work-in-progress.png",
@@ -40,6 +49,11 @@ const ProjectsSection = () =>{
                     onClick={handleTagChange}
                     name="Web"
                     isSelected={tag === "Web"}
+                />
+                <ProjectTag
+                    onClick={handleTagChange}
+                    name="JavaScript"
+                    isSelected={tag === "JavaScript"}
                 />
             </div>
             <div className="grid md:grid-cols-3 gab-8 md:gap-12">
