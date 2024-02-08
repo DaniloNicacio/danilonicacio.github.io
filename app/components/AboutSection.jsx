@@ -51,8 +51,6 @@ const AboutSection = () => {
         })
     }
 
-    const tabs = ["skills", "education", "certifications"];
-
     return (
         <section className="text-white">
             <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
@@ -67,18 +65,31 @@ const AboutSection = () => {
                         I am currently seeking new experiences and job opportunities
                     </p>
                     <div className="flex flex-row justify-start mt-8">
-                        {tabs.map((tabId) => (
-                            <TabButton
-                                key={tabId}
-                                selectTab={() => handleTabChange(tabId)}
-                                active={tab === tabId}
-                            >
-                                {" "}
-                                {tabId.charAt(0).toUpperCase() + tabId.slice(1)}{" "}
-                            </TabButton>
-                        ))}
+                        <TabButton
+                            selectTab={() => handleTabChange("skills")}
+                            active={tab === "skills"}
+                        >
+                            {" "}
+                            Skills{" "}
+                        </TabButton>
+                        <TabButton
+                            selectTab={() => handleTabChange("education")}
+                            active={tab === "education"}
+                        >
+                            {" "}
+                            Education{" "}
+                        </TabButton>
+                        <TabButton
+                            selectTab={() => handleTabChange("certifications")}
+                            active={tab === "certifications"}
+                        >
+                            {" "}
+                            Certifications{" "}
+                        </TabButton>
                     </div>
-                    <div className="mt-8">{TAB_DATA.find((t) => t.id ===tab).content}</div>
+                    <div className="mt-8">
+                        {TAB_DATA.find((t) => t.id === tab).content}
+                    </div>
                 </div>
             </div>
         </section>
