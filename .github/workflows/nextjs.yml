@@ -28,6 +28,9 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    env:
+      FROM_EMAIL: ${{ env.FROM_EMAIL }}
+      RESEND_API_KEY: ${{ env.RESEND_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
