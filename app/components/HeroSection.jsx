@@ -6,11 +6,11 @@ import { motion } from "framer-motion"
 
 const HeroSection = () =>{
     return (
-        <section className="lg:py-16">
+        <section className="lg:py-16 lg:mt-20">
             {/* Presentation Setup */}
             <div className="grid grid-cols-1 sm:grid-cols-12">
                 <motion.div
-                    initial= {{opacity: 0, scale: 0}}
+                    initial= {{opacity: 0, scale: 0.5}}
                     animate={{opacity: 1, scale: 1}}
                     transition={{duration: 0.5}}
                     className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
@@ -49,7 +49,7 @@ const HeroSection = () =>{
                 </motion.div>
                 {/* Profile Picture Setup */}
                 <motion.div
-                    initial= {{opacity: 0, scale: 0}}
+                    initial= {{opacity: 0, scale: 0.5}}
                     animate={{opacity: 1, scale: 1}}
                     transition={{duration: 0.5}}
                     className="col-span-4 place-self-center mt-4 lg:mt-0">
