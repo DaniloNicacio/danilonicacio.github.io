@@ -54,15 +54,15 @@ const AboutSection = () => {
     };
 
     return (
-        <section className="text-white">
-            <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+        <section className="text-white" id="about">
+            <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 lg:mt-3">
                 <Image src="/images/about-image.jpg" width={500} height={500} alt="profile-picture" />
                 <motion.div
                     initial= {{opacity: 0, scale: 0.5}}
                     animate={{opacity: 1, scale: 1}}
                     transition={{duration: 0.5}}
                     className="mt-4 md:mt-0 text-left flex flex-col h-full">
-                    <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+                    <p className="text-4xl font-bold text-white mb-4">About Me</p>
                     <p className="text-base md:text-lg">
                         I am Full Stack Developer, graduating in Computer Science.
                         I have experience working with Python, JavaScript, TypeScript, AngularJs, Spring Boot, Docker, MySQL, Git, Google Cloud and Selenium.
