@@ -16,10 +16,28 @@ const projectsData = [
     },
     {
         id: 2,
+        title: "Discord Music Bot",
+        description: "A Discord bot that plays songs from YouTube",
+        image: "/images/projects/discord-bot.png",
+        tag: ["All", "Web", "Python"],
+        gitUrl: "https://github.com/DaniloNicacio/discord-bot",
+        previewUrl: "https://github.com/DaniloNicacio/discord-bot"
+    },
+    {
+        id: 3,
+        title: "CuteBotYTD",
+        description: "A Discord bot that download videos and send it to the user",
+        image: "/images/projects/telegram-bot.png",
+        tag: ["All", "Python"],
+        gitUrl: "https://github.com/DaniloNicacio/cutebotytd",
+        previewUrl: "https://t.me/cuteytb_bot"
+    },
+    {
+        id: 4,
         title: "Work in Progress",
         description: "This is just a placeholder",
         image: "/images/projects/work-in-progress.png",
-        tag: ["All", "Web"],
+        tag: ["All", "Web", "JavaScript","Python"],
         gitUrl: "/",
         previewUrl: "/"
     }
@@ -60,6 +78,11 @@ const ProjectsSection = () =>{
                     onClick={handleTagChange}
                     name="JavaScript"
                     isSelected={tag === "JavaScript"}
+                />
+                <ProjectTag
+                    onClick={handleTagChange}
+                    name="Python"
+                    isSelected={tag === "Python"}
                 />
             </div>
             <ul ref={ref} className="grid md:grid-cols-3 gab-8 md:gap-12">
