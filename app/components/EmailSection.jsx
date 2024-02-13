@@ -84,7 +84,7 @@ const EmailSection = () => {
                             type="email"
                             id="email"
                             required
-                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                            className="input input-bordered input-error w-full"
                             placeholder="youremail@google.com"
                         />
                     </div>
@@ -99,7 +99,7 @@ const EmailSection = () => {
                             type="text"
                             id="subject"
                             required
-                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                            className="input input-bordered input-error w-full"
                             placeholder="Just saying hi"
                         />
                     </div>
@@ -113,13 +113,13 @@ const EmailSection = () => {
                             name="message"
                             id="message"
                             required
-                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                            className="textarea textarea-error w-full"
                             placeholder="Let&apos;s talk about..."
                         />
                     </div>
                     <button
                         type="submit"
-                        className="bg-red-500 hover:bg-red-600 text-white font-medum py-2.5 px-5 rounded-lg w-full">
+                        className="btn btn-error w-full">
                         Send Message
                     </button>
                 </form>

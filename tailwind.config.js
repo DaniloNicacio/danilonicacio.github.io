@@ -20,5 +20,5 @@ module.exports = {
       secondary: colors.grey,
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 }
