@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from "react";
 import Image from "next/image";
+import TabButton from "@/app/components/TabButton";
+import { motion, AnimatePresence } from "framer-motion";
 
 const TAB_DATA = [
     {
@@ -45,13 +47,21 @@ const TAB_DATA = [
 ];
 
 const AboutSection = () => {
-    const [tab] = useState("skills");
+    const [tab, setTab] = useState("skills");
+
+    const handleTabChange = (id) => {
+        setTab(id);
+    };
 
     return (
         <section className="text-white" id="about">
             <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 lg:mt-3">
                 <Image src="/images/about-image.jpg" width={500} height={500} alt="profile-picture" />
-                <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+                <motion.div
+                    initial= {{opacity: 0, scale: 0.5}}
+                    animate={{opacity: 1, scale: 1}}
+                    transition={{duration: 0.5}}
+                    className="mt-4 md:mt-0 text-left flex flex-col h-full">
                     <p className="text-4xl font-bold text-white mb-4">About Me</p>
                     <p className="text-base md:text-lg">
                         I am Full Stack Developer, graduating in Computer Science.
@@ -60,19 +70,36 @@ const AboutSection = () => {
                         process automation and BackEnd maintenance.
                         I am currently seeking new experiences and job opportunities
                     </p>
-                    <div className="mt-8 h-80 overflow-y-auto">
+                    <div className="flex flex-row justify-start mt-8">
                         {TAB_DATA.map((tabItem) => (
-                            <div
+                            <TabButton
                                 key={tabItem.id}
-                                style={{ display: tab === tabItem.id ? "block" : "none" }}
+                                selectTab={() => handleTabChange(tabItem.id)}
+                                active={tab === tabItem.id}
                             >
-                                <div className="pl-4">
-                                    {tabItem.content}
-                                </div>
-                            </div>
+                                {tabItem.title}
+                            </TabButton>
                         ))}
                     </div>
-                </div>
+                    <div className="mt-8 h-80 overflow-y-auto">
+                        <AnimatePresence>
+                            {TAB_DATA.map((tabItem) => (
+                                <motion.div
+                                    key={tabItem.id}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={{ opacity: tab === tabItem.id ? 1 : 0, scale: tab === tabItem.id ? 1 : 0.9 }}
+                                    exit={{ opacity: 0, scale: 0.9 }}
+                                    transition={{ duration: 0.3 }}
+                                    style={{ display: tab === tabItem.id ? "block" : "none" }}
+                                >
+                                    <div className="pl-4">
+                                        {tabItem.content}
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );
