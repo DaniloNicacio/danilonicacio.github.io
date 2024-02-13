@@ -84,7 +84,7 @@ const EmailSection = () => {
                             type="email"
                             id="email"
                             required
-                            className="input input-bordered input-info w-full"
+                            className="input input-bordered input-error w-full"
                             placeholder="youremail@google.com"
                         />
                     </div>
@@ -99,7 +99,7 @@ const EmailSection = () => {
                             type="text"
                             id="subject"
                             required
-                            className="input input-bordered input-info w-full"
+                            className="input input-bordered input-error w-full"
                             placeholder="Just saying hi"
                         />
                     </div>
@@ -113,13 +113,13 @@ const EmailSection = () => {
                             name="message"
                             id="message"
                             required
-                            className="textarea textarea-info w-full"
+                            className="textarea textarea-error w-full"
                             placeholder="Let&apos;s talk about..."
                         />
                     </div>
                     <button
                         type="submit"
-                        className="btn btn-info w-full">
+                        className="btn btn-error w-full">
                         Send Message
                     </button>
                 </form>

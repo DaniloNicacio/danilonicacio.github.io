@@ -64,11 +64,11 @@ const HeroSection = () => {
                         &quot;{randomPhrase}&quot;
                     </p>
                     <div>
-                        <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-white hover:bg-slate-200 text-black">
+                        <button className="px-6 py-3 btn sm:btn-md mr-4 btn-error text-black">
                             Hire Me
                         </button>
-                        <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br hover:bg-slate-800 text-white border mt-3">
-                            <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">Download CV</span>
+                        <button className="px-1 py-1 btn sm:btn-md btn-outline mt-3">
+                            <span className="border-slate-600 hover:border-white">Download CV</span>
                         </button>
                     </div>
                 </motion.div>
