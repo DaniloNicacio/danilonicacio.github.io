@@ -1,6 +1,6 @@
 {
   "name": "potifolio",
-  "version": "1.10.2",
+  "version": "2.11.3",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
+    "daisyui": "^4.7.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "postcss": "^8",
