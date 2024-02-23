@@ -48,10 +48,6 @@ const HeroSection = () => {
                             sequence={[
                                 'FullStack Developer',
                                 1000,
-                                'Mobile Developer',
-                                1000,
-                                'Game Developer',
-                                1000,
                                 'Danilo',
                                 1000,
                             ]}
