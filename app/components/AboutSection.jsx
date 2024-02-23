@@ -61,7 +61,7 @@ const AboutSection = () => {
                     <p className="text-4xl font-bold text-white mb-4">About Me</p>
                     <p className="text-base md:text-lg">
                         I am Full Stack Developer, graduating in Computer Science.
-                        I have experience working with Python, JavaScript, TypeScript, AngularJs, Spring Boot, Docker, MySQL, Git, Google Cloud and Selenium.
+                        I have experience working with Python, TypeScript, AngularJs, Spring Boot, Docker, MySQL, Git, Google Cloud and Selenium.
                         Currently Intern in General Command of the Military Police of the State of Amazonas - DTI as a developer in the field of data extraction,
                         process automation and BackEnd maintenance.
                         I am currently seeking new experiences and job opportunities
